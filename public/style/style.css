@@ -10,6 +10,9 @@ html {
   font-size: 10px; }
 
 body {
-  color: silver; }
+  font-size: 1.4rem;
+  color: #181818;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+  font-weight: 300; }
 
 /*# sourceMappingURL=style.css.map */
