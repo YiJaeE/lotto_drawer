@@ -2,7 +2,7 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 // variable
-$bg-color: #181818;
+$basic-color: #181818;
 
 // common setting
 *, *::before, *::after {
@@ -20,7 +20,7 @@ html {
 
 body {
   font-size: 1.4rem;
-  color: $bg-color;
+  color: $basic-color;
   font-family: 'Spoqa Han Sans', 'Sans-serif';
   font-weight: 300;
 }
