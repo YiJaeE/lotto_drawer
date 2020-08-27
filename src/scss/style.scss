@@ -1,5 +1,18 @@
 $bg-color: silver;
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 10px;
+}
+
 body {
   color: $bg-color;
 }
