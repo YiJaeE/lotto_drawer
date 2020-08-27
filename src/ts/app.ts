@@ -24,14 +24,14 @@ $selectLotto !== null && $selectLotto.addEventListener('click', (e: Event) => {
   const target: HTMLElement = <HTMLElement>e.target;
   const $removeContainer = document.getElementById('lotto-number');
   if ($removeContainer !== null && $lotto !== null) {
-    for (let i = 0; i < $lotto.children.length; i++) {
-      let num = $lotto.children.length;
-      while (num > 0) {
+    let num = $lotto.children.length;
+    while (num > 0) {
+      for (let i = 0; i < $lotto.children.length; i++) {
         if ($lotto.children[i]) {
           $lotto.removeChild($lotto.children[i]);
         }
-        num--;
       }
+      num--;
     }
   }
   for (let i = 0; i < +target.id; i++) {

@@ -30,15 +30,23 @@ $selectLotto !== null && $selectLotto.addEventListener('click', function (e) {
     var target = e.target;
     var $removeContainer = document.getElementById('lotto-number');
     if ($removeContainer !== null && $lotto !== null) {
-        for (var i = 0; i < $lotto.children.length; i++) {
-            var num = $lotto.children.length;
-            while (num > 0) {
+        var num = $lotto.children.length;
+        while (num > 0) {
+            for (var i = 0; i < $lotto.children.length; i++) {
                 if ($lotto.children[i]) {
                     $lotto.removeChild($lotto.children[i]);
                 }
-                num--;
             }
+            num--;
         }
+        // for (let i = 0; i < $lotto.children.length; i++) {
+        //   while (num > 0) {
+        //     if ($lotto.children[i]) {
+        //       $lotto.removeChild($lotto.children[i]);
+        //     }
+        //     num--;
+        //   }
+        // }
     }
     for (var i = 0; i < +target.id; i++) {
         draw();
