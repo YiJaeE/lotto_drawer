@@ -39,14 +39,6 @@ $selectLotto !== null && $selectLotto.addEventListener('click', function (e) {
             }
             num--;
         }
-        // for (let i = 0; i < $lotto.children.length; i++) {
-        //   while (num > 0) {
-        //     if ($lotto.children[i]) {
-        //       $lotto.removeChild($lotto.children[i]);
-        //     }
-        //     num--;
-        //   }
-        // }
     }
     for (var i = 0; i < +target.id; i++) {
         draw();
