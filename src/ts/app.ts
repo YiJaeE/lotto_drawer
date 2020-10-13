@@ -1,7 +1,20 @@
 const $selectLotto: Element | null = document.querySelector('.select-lotto');
 const $lotto: Element | null = document.querySelector('.lotto');
 
-const draw = () => {
+const render: Function = <T> (lotto: Array<T>) => {
+  const $lottoList = document.createElement('li');
+  $lottoList.setAttribute('id', 'lotto-list');
+  lotto?.map((number) => {
+    const $lottoNumber = document.createElement('span');
+    $lottoNumber.setAttribute('class', 'lotto-number');
+    $lottoList.appendChild($lottoNumber);
+    const $numberText = document.createTextNode(`${number}`);
+    $lottoNumber.appendChild($numberText);
+  })
+  $lotto?.appendChild($lottoList);
+}
+
+const draw:Function = () => {
   const lotto = [];
   for (let i = 0; i < 6; i++) {
     const num = Math.floor(Math.random() * 45) + 1;
@@ -13,20 +26,12 @@ const draw = () => {
     }
     lotto.sort((a, b) => a - b);
   }
-  const $lottoList = document.createElement('li');
-  $lottoList.setAttribute('id', 'lotto-number');
-  const $lottoNumber = document.createElement('span');
-  $lottoList.appendChild($lottoNumber);
-  const $numberText = document.createTextNode(`${lotto}`);
-  $lottoNumber.appendChild($numberText);
-  // const $lottoNumber = document.createTextNode(`${lotto}`);
-  // $lottoList.appendChild($lottoNumber);
-  $lotto !== null && $lotto.appendChild($lottoList);
+  render(lotto);
 };
 
-const printNumber = (e: Event) => {
+const printNumber: any = (e: Event) => {
   const target: HTMLElement = <HTMLElement>e.target;
-  const $removeContainer = document.getElementById('lotto-number');
+  const $removeContainer = document.getElementById('lotto-list');
   if ($removeContainer !== null && $lotto !== null) {
     let num = $lotto.children.length;
     while (num > 0) {
