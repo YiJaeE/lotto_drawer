@@ -22,11 +22,15 @@ var draw = function () {
     }
     var $lottoList = document.createElement('li');
     $lottoList.setAttribute('id', 'lotto-number');
-    var $lottoNumber = document.createTextNode("" + lotto);
+    var $lottoNumber = document.createElement('span');
     $lottoList.appendChild($lottoNumber);
+    var $numberText = document.createTextNode("" + lotto);
+    $lottoNumber.appendChild($numberText);
+    // const $lottoNumber = document.createTextNode(`${lotto}`);
+    // $lottoList.appendChild($lottoNumber);
     $lotto !== null && $lotto.appendChild($lottoList);
 };
-$selectLotto !== null && $selectLotto.addEventListener('click', function (e) {
+var printNumber = function (e) {
     var target = e.target;
     var $removeContainer = document.getElementById('lotto-number');
     if ($removeContainer !== null && $lotto !== null) {
@@ -43,4 +47,5 @@ $selectLotto !== null && $selectLotto.addEventListener('click', function (e) {
     for (var i = 0; i < +target.id; i++) {
         draw();
     }
-});
+};
+$selectLotto !== null && $selectLotto.addEventListener('click', printNumber);
