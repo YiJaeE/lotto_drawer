@@ -22,15 +22,18 @@ body {
   justify-content: center; }
 
 .container {
-  border-radius: 25px;
   background-color: #f7f7f7;
   box-shadow: -4px -2px 4px 0px #ffffff, 4px 2px 6px 0px #dfe4ea;
+  border-radius: 25px;
   width: 35vw;
   height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10vh; }
+
+h1 {
+  padding: 10px; }
 
 .lotto-container {
   width: 450px; }
@@ -39,14 +42,34 @@ body {
   display: flex;
   justify-content: space-evenly; }
   .select-lotto button {
-    border-radius: 25px;
     background-color: #f7f7f7;
     box-shadow: -4px -2px 4px 0px #ffffff, 4px 2px 6px 0px #dfe4ea;
+    border-radius: 15px;
     border: 1px;
     padding: 10px;
+    color: #4a5568;
     cursor: pointer; }
 
-#lotto-number {
-  margin-top: 20px; }
+#lotto-list {
+  margin-top: 20px;
+  list-style-type: none; }
+  #lotto-list .lotto-number {
+    background-color: #f7f7f7;
+    box-shadow: -4px -2px 4px 0px #ffffff, 4px 2px 6px 0px #dfe4ea;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px;
+    text-align: center;
+    padding: 11px 0;
+    color: #fff;
+    font-weight: 600; }
+    #lotto-list .lotto-number:nth-child(-n + 2) {
+      background-color: #fcc43e; }
+    #lotto-list .lotto-number:nth-child(3) {
+      background-color: #8cc6e7; }
+    #lotto-list .lotto-number:nth-child(n + 4) {
+      background-color: #a7a3de; }
 
 /*# sourceMappingURL=style.css.map */
