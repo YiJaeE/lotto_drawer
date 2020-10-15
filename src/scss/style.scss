@@ -5,13 +5,13 @@
 // variable
 $font-color: #4a5568;
 $basic-color: #f7f7f7;
+$white: #fff;
 
 // mixin
-
 @mixin neumorphism {
   // border-radius: 25px;
   background-color: $basic-color;
-  box-shadow: -4px -2px 4px 0px #ffffff, 4px 2px 6px 0px #dfe4ea;
+  box-shadow: -4px -2px 4px 0px $white, 4px 2px 6px 0px #dfe4ea;
 }
 
 // common setting
@@ -40,23 +40,29 @@ body {
   justify-content: center;
 }
 
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+// style
 .container {
   @include neumorphism;
   border-radius: 25px;
-  width: 35vw;
-  height: 60vh;
+  width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10vh;
-}
-
-h1 {
-  padding: 10px;
+  margin: 30px 0;
+  padding: 20px 0;
 }
 
 .lotto-container {
   width: 450px;
+  padding-bottom: 10px;
 }
 
 .select-lotto {
@@ -69,13 +75,11 @@ h1 {
     border: 1px;
     padding: 10px;
     color: $font-color;
-    cursor: pointer;
   }
 }
 
 #lotto-list {
   margin-top: 20px;
-  list-style-type: none;
 
   .lotto-number {
     @include neumorphism;
@@ -86,7 +90,7 @@ h1 {
     margin: 10px;
     text-align: center;
     padding: 11px 0;
-    color: #fff;
+    color: $white;
     font-weight: 600;
 
     &:nth-child(-n + 2) {
