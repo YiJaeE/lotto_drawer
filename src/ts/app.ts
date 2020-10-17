@@ -48,4 +48,4 @@ const printNumber: any = (e: Event) => {
   }
 }
 
-$selectLotto !== null && $selectLotto.addEventListener('click', printNumber);
+$selectLotto?.addEventListener('click', printNumber);

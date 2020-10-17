@@ -52,4 +52,4 @@ var printNumber = function (e) {
         draw();
     }
 };
-$selectLotto !== null && $selectLotto.addEventListener('click', printNumber);
+$selectLotto === null || $selectLotto === void 0 ? void 0 : $selectLotto.addEventListener('click', printNumber);
