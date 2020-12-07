@@ -34,9 +34,23 @@ var draw = function () {
     }
     render(lotto);
 };
+var buttonClick = function (target) {
+    if ($selectLotto) {
+        var $button = $selectLotto.children;
+        for (var i = 0; i < $button.length; i++) {
+            if (target.id === $button[i].id) {
+                $button[i].classList.add('button-click');
+            }
+            else {
+                $button[i].classList.remove('button-click');
+            }
+        }
+    }
+};
 var printNumber = function (e) {
     var target = e.target;
     var $removeContainer = document.getElementById('lotto-list');
+    buttonClick(target);
     if ($removeContainer !== null && $lotto !== null) {
         var num = $lotto.children.length;
         while (num > 0) {
