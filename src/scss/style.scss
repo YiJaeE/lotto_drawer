@@ -9,9 +9,13 @@ $white: #fff;
 
 // mixin
 @mixin neumorphism {
-  // border-radius: 25px;
   background-color: $basic-color;
   box-shadow: -4px -2px 4px 0px $white, 4px 2px 6px 0px #dfe4ea;
+}
+
+@mixin neumorphismClick {
+  background-color: $basic-color;
+  box-shadow: inset -5px -3px 5px 0px #dfe4ea, inset 4px 2px 6px 0px white;
 }
 
 // common setting
@@ -75,6 +79,13 @@ li {
     border: 1px;
     padding: 10px;
     color: $font-color;
+
+    &:hover {
+      @include neumorphismClick;
+    }
+  }
+  .button-click {
+    @include neumorphismClick;
   }
 }
 
