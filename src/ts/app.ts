@@ -34,20 +34,16 @@ const buttonClick: Function = (target:HTMLElement) => {
     const $button = $selectLotto.children;
     for (let i = 0; i < $button.length; i++) {
       if (target.id === $button[i].id) {
-        $button[i].classList.add('button-click')
+        $button[i].classList.add('button-click');
       } else {
-        $button[i].classList.remove('button-click')
+        $button[i].classList.remove('button-click');
       }
     }
   }
 }
 
-const printNumber: any = (e: Event) => {
-  const target: HTMLElement = <HTMLElement>e.target;
+const removeContainer: Function = () => {
   const $removeContainer = document.getElementById('lotto-list');
-
-  buttonClick(target)
-
   if ($removeContainer !== null && $lotto !== null) {
     let num = $lotto.children.length;
     while (num > 0) {
@@ -59,6 +55,14 @@ const printNumber: any = (e: Event) => {
       num--;
     }
   }
+}
+
+const printNumber: any = (e: Event) => {
+  const target: HTMLElement = <HTMLElement>e.target;
+  
+  buttonClick(target);
+
+  removeContainer();
 
   for (let i = 0; i < +target.id; i++) {
     draw();
