@@ -13,4 +13,4 @@ HTML5
 
 ## 구현화면
 
-![로또추첨기](./src/img/implementation.gif)
+![로또추첨기](https://github.com/YiJaeE/lotto_drawer/blob/master/src/img/implementation.GIF?raw=true)
