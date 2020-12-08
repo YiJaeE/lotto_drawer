@@ -47,10 +47,8 @@ var buttonClick = function (target) {
         }
     }
 };
-var printNumber = function (e) {
-    var target = e.target;
+var removeContainer = function () {
     var $removeContainer = document.getElementById('lotto-list');
-    buttonClick(target);
     if ($removeContainer !== null && $lotto !== null) {
         var num = $lotto.children.length;
         while (num > 0) {
@@ -62,6 +60,11 @@ var printNumber = function (e) {
             num--;
         }
     }
+};
+var printNumber = function (e) {
+    var target = e.target;
+    buttonClick(target);
+    removeContainer();
     for (var i = 0; i < +target.id; i++) {
         draw();
     }
