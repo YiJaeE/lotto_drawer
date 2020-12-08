@@ -13,4 +13,4 @@ HTML5
 
 ## 구현화면
 
-![로또추첨기](https://user-images.githubusercontent.com/47887717/101498930-01134700-39b0-11eb-9eee-a1f7980247d5.gif)
+![로또추첨기](./src/img/implementation.gif)
